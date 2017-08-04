@@ -30,7 +30,8 @@ gem 'devise'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
-gem 'bcrypt', '~> 3.1.11', platforms: [:ruby, :mingw, :x64_mingw]
+#gem 'bcrypt', '~> 3.1.11', platforms: [:ruby, :mingw, :x64_mingw]
+#gem 'bcrypt', git: 'https://github.com/codahale/bcrypt-ruby.git', :require => 'bcrypt
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -50,6 +51,10 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'factory_girl_rails'
   gem 'faker'
+  gem 'shoulda-matchers'
+   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  gem 'spring'
+  gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
 group :development do
@@ -67,7 +72,7 @@ end
 group :test do
 
   gem 'simple_bdd'
-  gem 'shoulda-matchers'
+
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
